@@ -17,7 +17,7 @@ module Signalman
     end
 
     def process
-      #create_event event.payload.except(:connection)
+      create_event event.payload.except(:connection)
     end
   end
 end
