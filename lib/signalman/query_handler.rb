@@ -19,8 +19,8 @@ module Signalman
     def process
       payload = {}
       payload[:sql] = event.payload[:sql]
-      payload[:binds] = event.payload[:binds]
-      payload[:type_casted_binds] = event.payload[:type_casted_binds]
+      payload[:binds] = event.payload[:binds].class
+      payload[:type_casted_binds] = event.payload[:type_casted_binds].class
       payload[:statement_name] = event.payload[:statement_name]
       #payload[:async] = event.payload[:async]
 
