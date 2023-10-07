@@ -17,7 +17,7 @@ module Signalman
     end
 
     def process
-      create_event event.payload.class
+      create_event event.payload.except(:connection).to_json
     end
   end
 end
