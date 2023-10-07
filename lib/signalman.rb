@@ -7,6 +7,9 @@ require "signalman/mail_handler"
 require "signalman/query_handler"
 require "signalman/view_handler"
 
+require "active_support"
+require "active_support/core_ext/hash"
+
 module Signalman
   cattr_accessor :events, default: {
     "process_action.action_controller" => {
