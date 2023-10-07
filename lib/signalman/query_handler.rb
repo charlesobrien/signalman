@@ -16,8 +16,8 @@ module Signalman
       IGNORED_QUERIES.any? { |q| q.match? event.payload[:name] }
     end
 
-    #def process
-    #  create_event event.payload
-    #end
+    def process
+      create_event "payload"
+    end
   end
 end
