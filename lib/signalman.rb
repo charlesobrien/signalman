@@ -13,6 +13,10 @@ module Signalman
       handler: ActionHandler,
       path: ->(event) { request_path(event) }
     },
+    /^\w+\.action_view/ => {
+      handler: ViewHandler,
+      path: ->(event) { view_path(event) }
+    },
     "sql.active_record" => {
       handler: QueryHandler,
       path: ->(event) { query_path(event) }
