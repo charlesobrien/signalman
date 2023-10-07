@@ -22,9 +22,9 @@ module Signalman
       #payload[:binds] = event.payload[:binds]
       #payload[:type_casted_binds] = event.payload[:type_casted_binds]
       #payload[:statement_name] = event.payload[:statement_name]
-      payload[:async] = event.payload[:async]
+      #payload[:async] = event.payload[:async]
 
-      create_event payload
+      create_event event.payload.keys()
     end
   end
 end
