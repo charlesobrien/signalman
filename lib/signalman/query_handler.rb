@@ -17,14 +17,14 @@ module Signalman
     end
 
     def process
-      payload = {}
-      payload[:sql] = event.payload[:sql]
-      payload[:binds] = event.payload[:binds].class
-      payload[:type_casted_binds] = event.payload[:type_casted_binds].class
-      payload[:statement_name] = event.payload[:statement_name]
+      #payload = {}
+      #payload[:sql] = event.payload[:sql]
+      #payload[:binds] = event.payload[:binds].class
+      #payload[:type_casted_binds] = event.payload[:type_casted_binds].class
+      #payload[:statement_name] = event.payload[:statement_name]
       #payload[:async] = event.payload[:async]
 
-      create_event payload
+      create_event event.payload.except(:binds, :connection)
     end
   end
 end
