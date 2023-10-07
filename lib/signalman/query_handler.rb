@@ -20,7 +20,7 @@ module Signalman
       payload = {}
       payload[:sql] = event.payload[:sql]
       #payload[:binds] = event.payload[:binds]
-      #payload[:type_casted_binds] = event.payload[:type_casted_binds]
+      payload[:type_casted_binds] = event.payload[:type_casted_binds]
       payload[:statement_name] = event.payload[:statement_name]
       #payload[:async] = event.payload[:async]
 
