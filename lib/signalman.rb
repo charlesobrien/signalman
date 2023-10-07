@@ -1,3 +1,6 @@
+require "active_support"
+require "active_support/core_ext/hash"
+
 require "signalman/version"
 require "signalman/engine"
 
@@ -6,9 +9,6 @@ require "signalman/job_handler"
 require "signalman/mail_handler"
 require "signalman/query_handler"
 require "signalman/view_handler"
-
-require "active_support"
-require "active_support/core_ext/hash"
 
 module Signalman
   cattr_accessor :events, default: {
