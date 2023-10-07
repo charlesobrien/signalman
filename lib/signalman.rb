@@ -1,6 +1,3 @@
-require "active_support"
-require "active_support/core_ext/hash"
-
 require "signalman/version"
 require "signalman/engine"
 
