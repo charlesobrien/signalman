@@ -17,9 +17,8 @@ module Signalman
     end
 
     def process
-      #payload = {}
-      #payload[:sql] = event.payload[:sql]
-      create_event event.payload.except("connection")
+      payload = event.payload.except(:connection)
+      create_event payload
     end
   end
 end
