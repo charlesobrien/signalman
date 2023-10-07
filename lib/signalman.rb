@@ -13,6 +13,10 @@ module Signalman
       handler: ActionHandler,
       path: ->(event) { request_path(event) }
     },
+    "sql.active_record" => {
+      handler: QueryHandler,
+      path: ->(event) { query_path(event) }
+    },
     "deliver.action_mailer" => {
       handler: MailHandler,
       path: ->(event) { mail_path(event) }
