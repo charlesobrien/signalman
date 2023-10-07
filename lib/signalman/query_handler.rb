@@ -17,7 +17,7 @@ module Signalman
     end
 
     def process
-      create_event event.payload[:sql]
+      create_event event.payload.class
     end
   end
 end
